@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #1f2c34;
+    --color-white: #e0e0e0;
+    --color-orange-hover: #ce7e03;
+    --color-orange-default: #f1a128;
+    --color-pink: #eabbd2;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background-color: var(--color-pink);
+    box-shadow: black 0px 0px 5px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+nav .nama {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size:20px;
+}
+
+.menu-navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-navbar li {
+    list-style: none;
+}
+
+.menu-navbar li a {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.menu-navbar li a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Hero Section */
+#home {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    background-color: var(--color-pink);
+    padding: 20px 30px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#home div h1 {
+    color: var(--color-primary);
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+#home div p {
+    color: var(--color-primary);
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+#home div a {
+    background-color: var(--color-orange-default);
+    color: var(--color-white);
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: rgba(0, 0, 0, 0.452) 0px 3px 0px;
+}
+
+#home div a:hover {
+    background-color: var(--color-orange-hover);
+}
+
+#home img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+
+#about {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.info-about h1{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.info-about p {
+    font-size: 16px;
+    text-align: center;
+}
+
+.content-about { 
+  display: flex; 
+  justify-content: space-around; 
+  flex-wrap: wrap; 
+  gap: 40px; 
+} 
+ 
+.timeline-container { 
+  max-width: 400px; 
+} 
+ 
+.timeline { 
+  position: relative; 
+  margin-left: 20px; 
+  border-left: 2px solid var(--color-white); 
+} 
+ 
+.timeline-item { 
+  position: relative; 
+  margin-bottom: 40px; 
+  padding-left: 20px; 
+} 
+ 
+.timeline-item .dot { 
+  position: absolute; 
+  left: -8px; 
+  top: 5px; 
+  width: 14px; 
+  height: 14px; 
+  background-color: var(--color-pink); 
+  border-radius: 50%; 
+  border: 2px solid var(--color-pink);
+}
+
+.contact-section { 
+  padding: 60px 40px; 
+  background: #eabbd2; 
+} 
+ 
+.contact-section h2 { 
+  font-size: 32px; 
+  margin-bottom: 30px; 
+  color: #0a1a2f; 
+  font-weight: 700; 
+  text-align: center; 
+} 
+ 
+.contact-grid { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 25px 60px; 
+} 
+ 
+.contact-item { 
+  display: flex; 
+  align-items: center; 
+  font-size: 18px; 
+  color: #333; 
+  font-weight: 500; 
+} 
+ 
+.contact-item i { 
+  font-size: 22px; 
+  margin-right: 12px; 
+  color: #0a1a2f; 
+} 
+footer { 
+background: #0a1a2f; 
+color: #fff; 
+text-align: center; 
+padding: 20px 0; 
+font-size: 16px; 
+font-weight: 500; 
+}
+
+@media (max-width: 992px) {
+  #home {
+    flex-direction: column-reverse;
+    text-align: left;
+  }
+
+  #home img {
+    width: 100%;
+  }
+
+  .content-about {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu-navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #home {
+    padding: 40px 20px;
+  }
+
+  #home div h1 {
+    font-size: 28px;
+  }
+
+  #home img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
